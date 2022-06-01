@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <title>HTML</title>
-    <style type="text/css">
-        h1 { color: #f4005f; }
-        p { font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <script>
+        function clickHandler() {
+            const box = document.getElementById("box");
+            const p = document.createElement("p");
+            p.innerText = "Added by JS";
+            box.appendChild(p);
+        }
+    </script>
 
 </head>
 <body>
@@ -16,5 +21,7 @@
         HTML
     </a>.
 </p>
+<button onclick="clickHandler()">JS</button>
+<div id="box"></div>
 </body>
 </html>
